@@ -39,7 +39,7 @@ public class ProductServiceImpl implements ProductService{
     @Override//删除产品
     public List<String> deletePro(String proTitle) {
         entity= productDao.sreachTitleProductDao(proTitle).get(0);
-        entity.setProState("已删除");
+     //   entity.setProState("已删除");
         return productDao.deletePro(entity);
     }
 
@@ -69,19 +69,19 @@ public class ProductServiceImpl implements ProductService{
 
         Date newDate=new Date();
         Format format=new SimpleDateFormat("yyyy-MM-dd  hh:mm");
-        entity.setCrateDate(format.format(newDate));
+       // entity.setCrateDate(format.format(newDate));
         if(proTitle!=null && proTitle!=""){
-            entity.setProTitle(proTitle.trim());
+           // entity.setProTitle(proTitle.trim());
         }
         if(proAbstract!=null && proAbstract!=""){
-            entity.setProAbstract(proAbstract.trim());
+         //   entity.setProAbstract(proAbstract.trim());
         }
         if(proKey!=null && proKey!=""){
-            entity.setProKey(proKey.trim());
+           // entity.setProKey(proKey.trim());
         }
-        entity.setHtmlText(htmlText);
+       /* entity.setHtmlText(htmlText);
         entity.setUserName(userName);
-        entity.setProType(proType);
+        entity.setProType(proType);*/
         listS= productDao.upDatePro(entity,newProTitle);
         return listS;
     }
@@ -92,7 +92,7 @@ public class ProductServiceImpl implements ProductService{
     public List<ProductEntity> proBrowserService(String proTitle) {
         list = productDao.sreachTitleProductDao(proTitle);
        if(list.size()>0){
-           list.get(0).setProBrowser(list.get(0).getProBrowser()+1);
+        //   list.get(0).setProBrowser(list.get(0).getProBrowser()+1);
            list=productDao.proBrowserDao(list.get(0));
 
         }
@@ -110,23 +110,23 @@ public class ProductServiceImpl implements ProductService{
     @Override//添加产品表
     public String addProduct(ProductEntity entity) {
         List<ProductEntity> list =new ArrayList<ProductEntity>();
-        if(entity.getProTitle().length()>30){
+      /*  if(entity.getProTitle().length()>30){
             return "标题不能超过30个";
         }else if (entity.getProKey().length()>15){
             return "关键字必须小于15个";
         }else if(entity.getProAbstract().length()>100){
             return "摘要文字不能超过100";
-        }
+        }*/
         createDate=new Date();
         Format format=new SimpleDateFormat("yyyy-MM-dd  hh:mm");
-        entity.setCrateDate(format.format(createDate));
-        entity.setProBrowser(0);
-        list= productDao.sreachTitleProductDao(entity.getProTitle());
+        /*entity.setCrateDate(format.format(createDate));
+        entity.setProBrowser(0);*/
+     //   list= productDao.sreachTitleProductDao(entity.getProTitle());
         if(list.size()>0){
             return "已经有相应的标题";
         }
         int price=0;
-        entity.setPrice(price);
+     //   entity.setPrice(price);
 
         return productDao.addProductDao(entity);
     }
@@ -153,7 +153,7 @@ public class ProductServiceImpl implements ProductService{
        String proInfoTotal="";
        String[] proInfoArr;
        int flag;
-       if (entity.getProInfoList()!=null) {
+     /*  if (entity.getProInfoList()!=null) {
            for (int i = 0; i < entity.getProInfoList().size(); i++) { //循环出每一个需求名
                flag = 0;
                if (proInfoTotal.length() < 0) {  //第一个就添加;
@@ -175,19 +175,19 @@ public class ProductServiceImpl implements ProductService{
            if (proInfoTotal.split(";").length >= 5) {
                return "您的需求定位已经足够多了";
            }
-       }
-        List<ProductInofEntity> list=entity.getProInfoList();//查看是否有相应的产品的需求定位和服务是否存在
+       }*/
+      //  List<ProductInofEntity> list=entity.getProInfoList();//查看是否有相应的产品的需求定位和服务是否存在
         if(list!=null){
             if(list.size()>0) {
                 for (int i = 0; i < list.size(); i++) {
-                    if (list.get(i).getTimeValue().equals(timeValue) && list.get(i).getService().equals(proService) && list.get(i).getDemand().equals(demand)) {//查看相应标题的需求方案是否存在
+                  /* if (list.get(i).getTimeValue().equals(timeValue) && list.get(i).getService().equals(proService) && list.get(i).getDemand().equals(demand)) {//查看相应标题的需求方案是否存在
                         return "您所填写的需求方案已经存在，请选择其他的方案";
-                    }
+                    }*/
                 }
             }
         }
         ProductInofEntity proInfoEntity=new ProductInofEntity();
-        proInfoEntity.setDemand(demand);  //需求
+       /* proInfoEntity.setDemand(demand);  //需求
         proInfoEntity.setService(proService);//服务标准
         proInfoEntity.setServicePrice(servicePrice);//服务金额
         proInfoEntity.setHard_Configuration(hard_Configuration);//硬性配置
@@ -202,7 +202,7 @@ public class ProductServiceImpl implements ProductService{
         proInfoEntity.setProEntity(entity);
         proInfoEntity.setPreferential(preferential);
         proInfoEntity.setTimeValue(timeValue);
-        proInfoEntity.setTotalNum(num);
+        proInfoEntity.setTotalNum(num);*/
         //--------------------------赠送
         List<String> list1=new ArrayList<>();
         List<String> list2=new ArrayList<>();
@@ -241,7 +241,7 @@ public class ProductServiceImpl implements ProductService{
                                     String serviceGuarante,String preferential ,String timeValue,String num) {
         list=productDao.sreachTitleProductDao(title);//根据产品查询相应的表
         if(list!=null &&list.size()>0){ //判断是否存在
-            if(list.get(0).getProInfoList().size()>0&&list.get(0).getProInfoList()!=null){//查询是否拥有相应的需求
+          /*  if(list.get(0).getProInfoList().size()>0&&list.get(0).getProInfoList()!=null){//查询是否拥有相应的需求
                 List<ProductInofEntity> proInfo=new ArrayList<ProductInofEntity>();
                 for(int i =0 ;i<list.get(0).getProInfoList().size();i++){
                      String demandP= list.get(0).getProInfoList().get(i).getDemand();
@@ -293,7 +293,7 @@ public class ProductServiceImpl implements ProductService{
                     }
                    return productDao.upDateInfoDao(proInfo.get(0));
                 }
-           }
+           }*/
         }
         return "错误，请重新输入";
     }

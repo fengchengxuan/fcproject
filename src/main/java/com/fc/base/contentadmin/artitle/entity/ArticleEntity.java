@@ -5,152 +5,134 @@ import com.fc.util.entity.FcComment;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 /**
  * Created by lenovo on 2017/9/20.
  */
 @Entity
-@Table(name="article")
+@Table(name="article")//文章表
 public class ArticleEntity {
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id; //id
-    @Column(name = "artTitle" )
-    private String artTitle;//产品标题
-    @Column(name = "artKey" )
-    private String artKey; //产品关键字
-    @Column(name = "artType" )
-    private String artType;//产品类型
-    @Column(name = "htmlText" ,length= 9999)
-    private  String htmlText;//产品描述
-    @Column(name="createDate")
-    private String crateDate;//创建时间
-    @Column(name = "artState" )
-    private  String artState;//状态
-    @Column(name = "artBrowser")
-    private  int artBrowser;  //浏览量
-    @Column(name = "userName")
-    private  String userName;//用户名称
-    @Column(name ="artAbstract")
-    private String artAbstract;
-    @Column(name="adminType")//管理员类型
-    private String adminType;
-    @Column(name="fcuser_id")//fcuser id
-    private String fcuserId;
-    @Column(name="fccommon_id")//fcuser id
-    private String fccommonId;
-    @Column(name="fccomment_id")
-    private String fccommentId;
+    private String id;// id
+    @Column(name = "fcuser_id" )
+    private String fcuser_id;// 用户id
+    @Column(name = "fccomment_id" )
+    private String fccomment_id;// 文章评价表id
+    @Column(name = "art_title" )
+    private String art_title;// 文章标题
+    @Column(name = "pic_url" )
+    private String pic_url;// 文章图片地址
+    @Column(name = "art_abstract" )
+    private String art_abstract;// 摘要
+    @Column(name = "art_key" )
+    private String art_key;// 关键词
+    @Column(name = "content" )
+    private String content;// 文章内容
+    @Column(name = "art_state" )
+    private String art_state;// 文章状态：0-草稿；1-正式发布
+    @Column(name = "art_type" )
+    private String art_type;// 文章类型：0-新闻快报；1-十二数据；2-我们与峰程
+    @Column(name = "create_date" )
+    private Date create_date;// 创建时间
+    @Column(name = "browse_count" )
+    private int browse_count;// 浏览次数
 
-    public String getAdminType() {
-        return adminType;
-    }
-
-    public void setAdminType(String adminType) {
-        this.adminType = adminType;
-    }
-
-    public String getCrateDate() {
-        return crateDate;
-    }
-
-    public void setCrateDate(String crateDate) {
-        this.crateDate = crateDate;
-    }
-
-    public String getArtAbstract() {
-        return artAbstract;
-    }
-
-    public void setArtAbstract(String artAbstract) {
-        this.artAbstract = artAbstract;
-    }
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getArtTitle() {
-        return artTitle;
+    public String getFcuser_id() {
+        return fcuser_id;
     }
 
-    public void setArtTitle(String artTitle) {
-        this.artTitle = artTitle;
+    public void setFcuser_id(String fcuser_id) {
+        this.fcuser_id = fcuser_id;
     }
 
-    public String getArtKey() {
-        return artKey;
+    public String getFccomment_id() {
+        return fccomment_id;
     }
 
-    public void setArtKey(String artKey) {
-        this.artKey = artKey;
+    public void setFccomment_id(String fccomment_id) {
+        this.fccomment_id = fccomment_id;
     }
 
-    public String getArtType() {
-        return artType;
+    public String getArt_title() {
+        return art_title;
     }
 
-    public void setArtType(String artType) {
-        this.artType = artType;
+    public void setArt_title(String art_title) {
+        this.art_title = art_title;
     }
 
-    public String getHtmlText() {
-        return htmlText;
+    public String getPic_url() {
+        return pic_url;
     }
 
-    public void setHtmlText(String htmlText) {
-        this.htmlText = htmlText;
+    public void setPic_url(String pic_url) {
+        this.pic_url = pic_url;
     }
 
-    public String getArtState() {
-        return artState;
+    public String getArt_abstract() {
+        return art_abstract;
     }
 
-    public void setArtState(String artState) {
-        this.artState = artState;
+    public void setArt_abstract(String art_abstract) {
+        this.art_abstract = art_abstract;
     }
 
-    public int getArtBrowser() {
-        return artBrowser;
+    public String getArt_key() {
+        return art_key;
     }
 
-    public void setArtBrowser(int artBrowser) {
-        this.artBrowser = artBrowser;
+    public void setArt_key(String art_key) {
+        this.art_key = art_key;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getContent() {
+        return content;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getFcuserId() {
-        return fcuserId;
+    public String getArt_state() {
+        return art_state;
     }
 
-    public void setFcuserId(String fcuserId) {
-        this.fcuserId = fcuserId;
+    public void setArt_state(String art_state) {
+        this.art_state = art_state;
     }
 
-    public String getFccommonId() {
-        return fccommonId;
+    public String getArt_type() {
+        return art_type;
     }
 
-    public void setFccommonId(String fccommonId) {
-        this.fccommonId = fccommonId;
+    public void setArt_type(String art_type) {
+        this.art_type = art_type;
     }
 
-    public String getFccommentId() {
-        return fccommentId;
+    public Date getCreate_date() {
+        return create_date;
     }
 
-    public void setFccommentId(String fccommentId) {
-        this.fccommentId = fccommentId;
+    public void setCreate_date(Date create_date) {
+        this.create_date = create_date;
+    }
+
+    public int getBrowse_count() {
+        return browse_count;
+    }
+
+    public void setBrowse_count(int browse_count) {
+        this.browse_count = browse_count;
     }
 }

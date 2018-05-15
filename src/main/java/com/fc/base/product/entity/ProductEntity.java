@@ -15,6 +15,87 @@ import java.util.List;
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;// id
+    @Column(name = "pro_title")
+    private String pro_title;// 产品标题
+    @Column(name = "pro_abstract" )
+    private String pro_abstract;// 产品摘要
+    @Column(name = "pic_url" )
+    private String pic_url;// 产品图片地址
+    @Column(name = "lowest_price")
+    private float lowest_price;// 最低价格
+    @Column(name = "pro_classes")
+    private String pro_classes;// 产品小类（需求定位），多个,用逗号隔开
+    @Column(name = "versions")
+    private String versions;// 版本号，多个,用逗号隔开
+    @Column(name = "service_times" )
+    private String service_times;// 购买时长，多个,用逗号隔开
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPro_title() {
+        return pro_title;
+    }
+
+    public void setPro_title(String pro_title) {
+        this.pro_title = pro_title;
+    }
+
+    public String getPro_abstract() {
+        return pro_abstract;
+    }
+
+    public void setPro_abstract(String pro_abstract) {
+        this.pro_abstract = pro_abstract;
+    }
+
+    public String getPic_url() {
+        return pic_url;
+    }
+
+    public void setPic_url(String pic_url) {
+        this.pic_url = pic_url;
+    }
+
+    public float getLowest_price() {
+        return lowest_price;
+    }
+
+    public void setLowest_price(float lowest_price) {
+        this.lowest_price = lowest_price;
+    }
+
+    public String getPro_classes() {
+        return pro_classes;
+    }
+
+    public void setPro_classes(String pro_classes) {
+        this.pro_classes = pro_classes;
+    }
+
+    public String getVersions() {
+        return versions;
+    }
+
+    public void setVersions(String versions) {
+        this.versions = versions;
+    }
+
+    public String getService_times() {
+        return service_times;
+    }
+
+    public void setService_times(String service_times) {
+        this.service_times = service_times;
+    }
+    /* @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; //id
     @Column(name = "proTitle" ,nullable = false)
     private String proTitle;//产品标题
@@ -153,5 +234,5 @@ public class ProductEntity {
     public void setProInfoList(List<ProductInofEntity> proInfoList) {
         this.proInfoList = proInfoList;
     }
-
+*/
 }

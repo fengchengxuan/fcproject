@@ -1113,13 +1113,13 @@ public class LoginAction {
         if(fcUser!=null){
             map.put("ok",true);
             FcComment fcComment=new FcComment();
-            fcComment.setFcuserId(fcUser.getId());
+         /*   fcComment.setFcuserId(fcUser.getId());
             fcComment.setCommenter(fcUser.getUserName());
             fcComment.setContent(content);
             fcComment.setCommentClass(new CommentUtil().changeType(type));
             fcComment.setSubmiterAddr(fcUser.getLocation());
             ArticleEntity entity= articleService.showDateOrFC(type,id).get(0);
-            fcComment.setArtcleId(entity.getId()+"");
+            fcComment.setArtcleId(entity.getId()+"");*/
             commentService.saveProComent(fcComment);
         }else{
             map.put("ok",false);
