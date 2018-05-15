@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.inner{
+	width: 980px;
+	margin-top: 8px;
+	box-shadow: 0 2px 5px 0 #cccccc;
+}
+.inner{
+	height: auto;
+	overflow: hidden;
+}
+#left .pwdl a{
+	color: #00CC99;
+}
+.list{
+	list-style: none;
+	margin-left: 127px;
+	margin-top: 67px;
+}
+.list li{
+	height: 41px;
+	margin-bottom: 29px;
+}
+.list li>span{
+	display: inline-block;
+	width: 91px;
+	text-align-last: justify;
+	font-size: 14px;
+	color: #666666;
+	margin-right: 10px;
+}
+.list input:focus{
+	background: white;
+}
+.list input{
+	width: 299px;
+	border: 1px solid #DDDDDD;
+	font-size: 14px;
+	color: #333333;
+	background: #f4f4f4;
+	outline: medium;
+	height: 41px;
+}
+.tishi{
+	display: inline-block;
+	color: red;
+}
+.mmqd{
+	display: inline-block;
+	height: 43px;
+	position: relative;
+}
+.mmqd>span{
+	display: inline-block;
+	width: 74px;
+	height: 7px;
+	border: 1px solid #25A90A;
+}
+.mmqd>span:first-child{
+	border-bottom-left-radius:5px;
+	border-top-left-radius:5px ;
+}
+.mmqd>span:last-child{
+	border-bottom-right-radius:5px;
+	border-top-right-radius:5px ;
+}
+.mmqd_ul li{
+	width: 74px;
+	float: left;
+	text-align: center;
+}
+.mmqd_ul{
+	list-style: none;
+	position: absolute;
+	top: -15px;
+}
+.tishi1{
+	float: right;
+    margin-right: 168px;
+    margin-top: -23px;
+}
+#button_2{
+	width: 160px;
+	height: 40px;
+	background: #38d46c;
+	border-radius: 5px;
+	margin-left: 410px;
+	margin-top: 30px;
+	margin-bottom: 166px;
+	outline: medium;
+	cursor: pointer;
+}

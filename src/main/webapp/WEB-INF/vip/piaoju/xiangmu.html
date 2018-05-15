@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>票据管理</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/xiangmu.css" />
+    	<style type="text/css">
+    		.navcon .indexa{
+    			background: #FFFFFF;
+    			color: #00cc99;
+    		}
+			.bill{
+				background: url(../../static/images/nsj.png)no-repeat;
+			}
+			#left ul li.billl a{
+				color: #09ceb2;
+			}
+			.mlt1{
+				background: #FFFFFF;
+			}
+			.mlt2{
+				background: #e8f1f0;
+			}
+    	</style>
+</head>
+<body>
+<div ng-include="'../comm/header.html'"></div>
+<div class="content clearfix">
+	<div class="wrapb">
+		<div ng-include="'../comm/left.html'"></div>
+		<div class="maincon">
+			<div class="way">
+				<a href="">首页</a>
+				>
+				<a href="">会员中心</a>
+				>
+				<a href="#">账号档案</a>
+				>
+				<a href="#">票据管理</a>
+			</div>
+			<div class="tishi">
+				<div class="tbox">
+					<div class="tbox2">
+						<img src="../../static/images/wenxin.png">
+					</div>
+					<div class="tbox3">
+						<p>增值税普通发票开给小规模纳税人或者开票资料不齐全的购买人，购买人取得后不可以进行进项税额抵扣。</p>
+						<p>若您还有疑问，建议联系贵司财务确认后再提交开票需求。</p>
+					</div>
+				</div>
+				<div class="tbox1">
+					<p>根据您的需求选择以下票据管理项目</p>
+					<ul class="tlist">
+						<li><a href="shenqing.html">申请开纸质发票</a></li>
+						<li><a href="dianzi.html">申请开电子发票</a></li>
+						<li><a href="shoufa.html">收发发票</a></li>
+						<li><a href="guanli.html">发票管理</a></li>
+						<li><a href="daona.html">发票到哪</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-include="'../comm/footer.html'"></div>
+<script src="../../static/js/angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>实名认证</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/porder.css">
+    <style type="text/css">
+        .navcon .indexa{
+            background: #FFFFFF;
+            color: #00cc99;
+        }
+        .rname{
+            background: url(../../static/images/nsj.png)no-repeat;
+        }
+        #left ul li.rnamel a{
+            color: #09ceb2;
+        }
+    </style>
+</head>
+<body>
+<div ng-include="'../comm/header.html'"></div>
+<div class="content clearfix" style="padding: 8px 0 80px 0">
+    <div class="wrapb">
+        <div ng-include="'../comm/left.html'"></div>
+        <div class="maincon">
+            <div class="way">
+                <a href="">首页</a>
+                >
+                <a href="">会员中心</a>
+                >
+                <a href="#">账号档案</a>
+                >
+                <a href="#">实名认证</a>
+            </div>
+            <div class="inner">
+                <div class="rname_box clearfix">
+                    <div class="rbt_img fl"><img src="../../static/images/rem.jpg" alt="温馨提示"></div>
+                    <div class="rbt_text fr">
+                        在您实名认证后，会对您账号归属有很大影响。例如，企业使用的帐号做个人实名认证后，遇到人员的变动、交接账号、账号欠费或归属纠纷时，可能会对个人/企业都产生不好影响或带来经济损失，后续可能也会影响您提现或者获取发票。（我们会严格保护及加密您的相关信息不会外泄）
+                    </div>
+                </div>
+                <h1 class="rnet">根据您认证方便请您选择自己的认证类型</h1>
+                <div class="rne_btns">
+                    <a href="" class="fl">个人认证</a>
+                    <a href="" class="fr">企业认证</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'../comm/footer.html'"></div>
+<script src="../../static/js/angular.min.js"></script>
+</body>
+</html>

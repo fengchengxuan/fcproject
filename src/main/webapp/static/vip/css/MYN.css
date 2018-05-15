@@ -1,0 +1,61 @@
+.inner{
+    width: 980px;
+    height: 425px;
+    margin-top: 8px;
+    box-shadow: 0 1px 10px 0 #cccccc;
+}
+.aa1{
+	width: 950px;
+	margin: 20px auto;
+	border-bottom:1px solid #CCCCCC;
+	height: 110px;
+	background: url(../images/wenxin.png) no-repeat 60px 30px;
+	}
+.aa1 h1{
+	position: relative;
+    top: 50px;
+    left: 180px;
+        font-size: 14px;
+    font-family:"微软雅黑";
+    color: #989898;
+}
+.aa2{
+	width: 950px;
+	margin: 20px auto;
+	border-bottom:1px solid #CCCCCC;
+	height: 150px;
+}
+.aa2 h4{
+	position: relative;
+    top: 20px;
+    left: 355px;
+    width: 330px;
+    font-size: 16px;
+    font-weight: bold;
+    font: "微软雅黑";
+}
+.aa2 button{
+	margin-top: 70px;
+    margin-left: 160px;
+    background: #38d46c;
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+   cursor: pointer;
+    outline: none;
+}
+
+#bb1{
+	margin-top: 55px;
+    margin-left: 75px;
+    font-size: 14px;
+}
+#bb1 span{
+	font-size: 35px;
+	color: red;
+	margin-left: 5px;
+	letter-spacing: 3px;
+}

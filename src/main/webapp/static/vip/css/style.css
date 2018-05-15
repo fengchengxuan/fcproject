@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 100%;
+}
+body{
+    background: #f5f5f5;
+    font-size: 12px;
+    font-family: “Microsoft YaHei” ! important;
+}
+a{
+    text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.wrapb{
+    width: 1200px;
+    margin: 0 auto;
+}
+#header{
+    width: 100%;
+    background: #FFFFFF;
+    height: 98px;
+}
+.logo{
+    margin: 14px 0 0 0;
+    width: 194px;
+    height: 70px;
+}
+.hrinfo{
+    height: 34px;
+    margin: 30px 60px 0 0;
+}
+.landr{
+    width: 80px;
+    height: 34px;
+    font-size: 12px;
+    color: #999999;
+}
+.landrb{
+    width: 80px;
+    padding: 10px 0 0 0;
+}
+.landr a{
+    line-height: 16px;
+    padding: 0 3px;
+    font-size: 12px;
+    color: #999999;
+}
+.tel{
+    width: 159px;
+    height: 33px;
+    margin-right: 66px;
+}
+.wd{
+    width: 240px;
+    height: 34px;
+    font-size: 12px;
+    color: #999999;
+    margin-right: 57px;
+}
+.wd span{
+    display: block;
+    height: 16px;
+}
+.nav{
+    width: 100%;
+    height: 67px;
+    min-width: 1200px;
+    background:url(../images/nav_bg.jpg)no-repeat 50% 50%;
+}
+.navcon{
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.navcon a{
+    display: block;
+    float: left;
+    padding: 0 26px;
+    line-height: 67px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+.navcon a:hover{
+    background: #FFFFFF;
+    color: #00cc99;
+}
+
+#left{
+    box-shadow: 0 1px 1px 0 #ccc;
+    width: 202px;
+    float: left;
+}
+#left ul li{
+    width: 200px;
+    height: 40px;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+}
+#left ul li a{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #333;
+    line-height: 40px;
+}
+#left ul li.ltitle{
+    width: 200px;
+    height: 52px;
+}
+#left ul li.lt1{
+    background: url(../images/tle_01.jpg);
+}
+#left ul li.lt2{
+    background: url(../images/tle_02.jpg);
+}
+#left ul li.lt3{
+    background: url(../images/tle_03.jpg);
+}
+#left ul li.lt4{
+    background: url(../images/tle_04.jpg);
+}
+.litbg{
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 15px 0 0 0;
+    float: right;
+    background: url("../images/ysj.png")no-repeat;
+}
+.content{
+    width: 1243px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 8px 0 0 0;
+    min-height: 950px;
+}
+#footer{
+	width: 100%;
+	height: 105px;
+}
+.footer_top{
+	width: 100%;
+	height: 55px;
+	background: #FFFFFF;
+}
+.footer_bottom{
+	width: 100%;
+	height: 50px;
+	background: #f8f8f8;
+}
+.footer_top ul,.footer_bottom ul{
+	/*margin-left: 230px;*/
+    margin: 0 auto;
+}
+.footer_top ul{
+    height: 55px;
+    width: 545px;
+}
+.footer_bottom ul{
+    width: 755px;
+    height: 50px;
+}
+.footer_top ul li,.footer_bottom ul li{
+	float: left;
+}
+.footer_top ul li a,.footer_bottom ul li a{
+	font-size: 12px;
+	color: #424242;
+}
+.footer_top ul li a{
+	line-height: 55px;
+}
+.footer_bottom ul li a{
+	line-height: 50px;
+}
+.mlt1{
+    background: #FFFFFF;
+}
+.mlt2{
+    background: #e8f1f0;
+}
+/*主要内容*/
+.maincon{
+    width: 980px;
+    float: right;
+}
+.way{
+    font-size: 12px;
+    color: #666666;
+    padding: 0 0 0 10px;
+}
+.way a{
+    font-size: 12px;
+    color: #3333cc;
+}
+.fl2 img{
+    border-radius: 50%;
+}
+.fl2 .p2{
+    float: right;
+    width: auto;
+    height: auto;
+    position: relative;
+    top: -40px;
+    right: 60px;
+    line-height: 30px;
+}
+.p2 span{
+    color: #3333cc;
+    display: block;
+}
+.fl2 .p{
+    margin: 10px 0 0 85px;
+    width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.fl2{
+    color: #666;
+    width: 290px;
+    height: 80px;
+    float: right;
+}
+.mways{
+    width: 1170px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    padding: 0 0 0 30px;
+    font-size: 12px;
+    color: #666666;
+}
+.mways a{
+    font-family: "微软雅黑", sans-serif;
+    font-size: 12px;
+    color: #666666;
+}

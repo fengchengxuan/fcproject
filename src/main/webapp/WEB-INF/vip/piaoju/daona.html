@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>发票到哪</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/xiangmu.css" />
+    	<style type="text/css">
+    		.navcon .indexa{
+    			background: #FFFFFF;
+    			color: #00cc99;
+    		}
+			.bill{
+				background: url(../../static/images/nsj.png)no-repeat;
+			}
+			#left ul li.billl a{
+				color: #09ceb2;
+			}
+			}
+    	</style>
+</head>
+<body>
+<div ng-include="'../comm/header.html'"></div>
+<div class="content clearfix">
+	<div class="wrapb">
+		<div ng-include="'../comm/left.html'"></div>
+		<div class="maincon">
+			<div class="way">
+				<a href="">首页</a>
+				>
+				<a href="">会员中心</a>
+				>
+				<a href="#">账号档案</a>
+				>
+				<a href="#">票据管理</a>
+			</div>
+			<div class="tishi">
+				<div class="tbox">
+					<div class="tbox2">
+						<img src="../../static/images/wenxin.png">
+					</div>
+					<div class="tbox3">
+						<p>增值税普通发票开给小规模纳税人或者开票资料不齐全的购买人，购买人取得后不可以进行进项税额抵扣。</p>
+						<p>若您还有疑问，建议联系贵司财务确认后再提交开票需求。</p>
+					</div>
+				</div>
+			</div>
+			<div class="daona">
+				<div class="dbox">
+					<ul class="dlist">
+						<li><a href="shenqing.html">申请开纸质发票</a></li>
+						<li><a href="dianzi.html">申请开电子发票</a></li>
+						<li><a href="shoufa.html">收发发票</a></li>
+						<li><a href="guanli.html">发票管理</a></li>
+						<li><a href="daona.html">发票到哪</a></li>
+					</ul>
+				</div>
+				<div class="dbox1">
+					<div class="dbox2">
+						<ul class="dlist1">
+							<li class="dl1">发票抬头</li>
+							<li class="dl2">物流/快递公司</li>
+							<li class="dl3">单号</li>
+							<li class="dl4">物流信息</li>
+						</ul>
+						<ul class="dlist2">
+							<li class="dl5">广西霸龙汇科有限公司</li>
+							<li class="dl6">顺丰</li>
+							<li class="dl7">4256789625</li>
+							<li class="dl8"><div>暂无</div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-include="'../comm/footer.html'"></div>
+<script src="../../static/js/angular.min.js"></script>
+</body>
+</html>

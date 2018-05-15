@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>提现</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/pay.css" />
+    <link rel="stylesheet" href="../../static/css/bootstrap.css" />
+    	<style type="text/css">
+    		.navcon .indexa{
+    			background: #FFFFFF;
+    			color: #00cc99;
+    		}
+			.balance{
+				background: url(../../static/images/nsj.png)no-repeat;
+			}
+			#left ul li.balancel a{
+				color: #09ceb2;
+			}
+    	</style>
+</head>
+<body>
+<div ng-include="'../comm/header.html'"></div>
+<div class="content clearfix">
+	<div class="wrapb">
+		<div ng-include="'../comm/left.html'"></div>
+		<div class="maincon">
+			<div class="way">
+				<a href="">首页</a>
+				>
+				<a href="">会员中心</a>
+				>
+				<a href="#">账号档案</a>
+				>
+				<a href="#">账户余额</a>
+			</div>
+			<div class="inner">
+				<div class="aa1">
+					<h1>如域名管理/虚拟主机/云服务器/VPS主机到期或者付费订单到期，账户余额可自动续费，同时方便会员购买及续费。</h1>
+				</div>
+			</div>
+			<div class="content_zj">
+				<div class="tb">
+				<ul class="tab_show">
+					<li style=" height: 40px;margin-left: 40px;font-size: 16px;line-height: 40px;"><a href="cz.html">充值</a></li>
+					<li class="list" style=" height: 40px;margin-left: 40px;font-size: 16px;line-height: 40px;"><a href="tx.html">提现</a></li>
+					<li style=" height: 40px;margin-left: 40px;font-size: 16px;line-height: 40px;"><a href="yemx.html">余额明细</a></li>
+				</ul>
+				</div>
+				<div class="box1">
+					<div class="aa3">
+						<p id="bb1">现金余额<span>¥1655.00</span></p>
+						<p id="bb2">可提现金额<span>¥1655.00</span></p>
+					</div>
+					<div class="tixian">
+						<ul>
+							<li class="list2" style="margin-left: 50px;"><a href="sqtx.html">申请提现</a></li>
+							<li><a href="cgtx.html">成功提现</a></li>
+							<li><a href="txjl.html">提现记录</a></li>
+						</ul>
+					</div>
+					<div class="aa4">
+						<ul>
+							<li>提现金额<input class="input3" type="text"></li>
+							<li>提现银行卡类型<input class="input3" type="text"></li>
+							<li>提现银行卡号<input class="input3" type="text"></li>
+							<li>银行卡账户姓名<input class="input3" type="text"></li>
+							<li>验证码<button class="button1">开始验证</button></li>
+							<li>手机号码<input class="input4" type="text"><button class="button2">获取校验码</button></li>
+							<li style="width: 388px;">手机校验码<input class="input4" type="text"></li><span>为了保证您账户余额提现安全，请<br />您输入图片中验证码及短信验证码</span>
+						</ul>
+						
+					</div>
+					<button class="button3">确认提现</button>
+				</div>
+				<div class="box2"></div>
+				<div class="box3"></div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div ng-include="'../comm/footer.html'"></div>
+<script src="../../static/js/angular.min.js"></script>
+</body>
+</html>

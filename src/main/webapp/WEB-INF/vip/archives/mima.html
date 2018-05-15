@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>密码设置</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/mima.css" />
+    	<style type="text/css">
+    		.navcon .indexa{
+    			background: #FFFFFF;
+    			color: #00cc99;
+    		}
+			.pwd{
+				background: url(../../static/images/nsj.png)no-repeat;
+			}
+			#left ul li.pwdl a{
+				color: #09ceb2;
+			}
+    	</style>
+</head>
+<body>
+<div ng-include="'../comm/header.html'"></div>
+<div class="content clearfix">
+	<div class="wrapb">
+		<div ng-include="'../comm/left.html'"></div>
+		<div class="maincon">
+			<div class="way">
+				<a href="">首页</a>
+				>
+				<a href="">会员中心</a>
+				>
+				<a href="#">账号档案</a>
+				>
+				<a href="#">密码设置</a>
+			</div>
+			<div class="inner">
+				<ul class="list">
+					<li>
+						<span>原始登录密码</span>
+						<input type="password" />
+						<p class="tishi" style="width: 329px;">请您输入原登录密码，密码输入不对无法进行新密码更改</p>
+					</li>
+					<li>
+						<span>设置登录密码</span>
+						<input type="password" />
+						<p class="tishi" style="width:337px;">请设置登录密码为数字+字母+特殊符号，请不要使用手机
+							号或生日及常用的数字作为密码。</p>
+					</li>
+					<li>
+						<span>确认登录密码</span>
+						<input type="password" />
+						<div class="mmqd">
+							<span></span>
+							<span></span>
+							<span></span>
+							<ul class="mmqd_ul">
+								<li>低</li>
+								<li>中</li>
+								<li>高</li>
+							</ul>
+						</div>
+						<p class="tishi tishi1" style="width: 272px;">您的密码强度不错，定期更改密码会更安全哦~</p>
+					</li>
+				</ul>
+				<button id="button_2">更新保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-include="'../comm/footer.html'"></div>
+<script src="../../static/js/angular.min.js"></script>
+</body>
+</html>

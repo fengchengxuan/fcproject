@@ -1,0 +1,203 @@
+/*中间部分*/
+.loginbg{
+    width: 100%;
+    min-width: 1200px;
+    height: 725px;
+    background-image: url(../images/bg1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.logincon{
+    width: 1200px;
+    height: 656px;
+    margin: 0 auto;
+}
+.loginbg .loginbox{
+    width: 312px;
+    height: 380px;
+    border-radius: 8px;
+    background-color: white;
+    margin: 190px 0 0 0;
+    float: right;
+}
+.loginbg .loginbox .title{
+    height: 36px;
+}
+.loginbg .loginbox .title button{
+    position: relative;
+    top:-20px
+}
+.loginbg .loginbox .user{
+    width: 260px;
+    height: 40px;
+    border:1px solid #CCCCCC;
+    margin: 4px 7px;
+    text-align: center;
+}
+.loginbg .loginbox .user img{
+    position: relative;top:1px;right: 6px
+}
+.loginbg .loginbox .user input{
+    width: 210px;
+    height: 30px;
+    border: none;
+    position: relative;top:4px;
+    outline: none;
+}
+.loginbg .loginbox .login{
+    width: 260px;
+    height: 44px;
+    border: none;
+    background-image: url(../images/login-bg.jpg);
+    margin:16px 0 0 8px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    outline: none;
+}
+.loginbg .loginbox span{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.loginbg .loginbox .shortcut{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #C5C5C5;
+}
+.loginbg .loginbox hr{
+    width: 250px;
+    height: 1px;
+    margin: 10px 0 0 30px;
+    border: none;
+    background: #C5C5C5;
+}
+.loginbg .loginbox .type{
+    width: 200px;
+    height: 56px;
+    margin: 10px auto;
+    text-align: center;
+}
+.loginbg .loginbox .type div{
+    width: 34px;
+    height: 55px;
+    float: left;
+    cursor:pointer;
+}
+.loginbg .loginbox .type div span{
+    font-size: 12px;
+    color: #CBCBCB;
+    position: relative;
+    top:-5px;
+}
+.tab .nav-tabs{
+    text-align: center;line-height: 40px;
+    height: 40px;position: relative;
+}
+.tab .nav-tabs li{
+    cursor: pointer;
+    width:164px;background-color: #ccebf2;position: absolute;
+    right:0; top: 0; overflow:hidden;border-radius: 8px 8px 0 0;
+}
+.tab .nav-tabs li a{
+    font-size: 18px;
+    color: #333333;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+}
+.tab .nav-tabs li a:hover{
+    border-top: none;
+    border-bottom: none;
+    border-right-color: #ddd;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:hover{
+    border: none;
+    z-index: 2;
+    border-right: 1px solid #ddd;
+}
+.tab .nav-tabs li.active a:before{
+    content: "";
+    width: 58%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.tab .nav-tabs li.active a:after{
+    content: "";
+    border-top: 10px solid #1fc1dd;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 43%;
+}
+.tab .tab-content{
+    font-size: 13px;
+    color: #999898;
+    line-height: 25px;
+    padding: 20px;
+    border-top: none;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #E3E3E3;font-size: 14px;opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #E3E3E3;font-size: 14px;opacity: 1;
+}
+
+input:-ms-input-placeholder{
+    color: #E3E3E3;font-size: 14px;opacity: 1;
+}
+
+input::-webkit-input-placeholder{
+    color: #E3E3E3;font-size: 14px;opacity: 1;
+}
+#output table{
+    width: 151px;
+    height: 151px;
+    margin-left: 60px;
+    margin-top: 15px;
+}
+.loginbg .loginbox .type div span{
+    top:0;
+}
+#login11241{
+    display: block;position: relative;height: 24px;width: 260px;color: red;font-size: 12px;top: -11px;left: 7px;
+    padding-left: 30px;
+
+}
+#login1124{
+    display: block;position: relative;height: 24px;width: 260px;color: red;font-size: 12px;top: -11px;left: 7px;
+    padding-left: 30px;
+}
+.width0height0{
+    height: 0;
+    width: 0;
+}
+.width0height0>span{
+    display: block;position: relative;z-index: 88;height: 18px;width: 200px;color: red;font-size: 12px;top: -15px;
+}
+.wrap .blist .li{
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #24a0ff;
+    width: 110px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 4px;
+    display: block;
+}
+.wrap .blist .li.active{
+    color: #FFFFFF;
+    background: url(../images/title12.png);
+}
