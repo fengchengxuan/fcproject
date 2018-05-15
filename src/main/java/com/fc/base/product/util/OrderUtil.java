@@ -64,7 +64,7 @@ public class OrderUtil {
         givenfreeList=new ArrayList<>();// 免费赠送
         for(int i=0;i<list.size();i++){
             ProInfoEntity entity=new ProInfoEntity();
-            entity.setId(list.get(i).getId());
+          /*  entity.setId(list.get(i).getId());
             entity.setDemand(list.get(i).getDemand());
             entity.setPreferential(list.get(i).getPreferential());
             entity.setService(list.get(i).getService());
@@ -78,7 +78,7 @@ public class OrderUtil {
                 givenFree.setType(list.get(i).getGivenFreeList().get(j).getType());
                 givenFree.setProInfo(list.get(i).getId());
                 givenfreeList.add(givenFree);
-            }
+            }*/
         }
         this.inofEntityList = inofEntityList;
     }
@@ -111,14 +111,14 @@ public class OrderUtil {
          orderInfo.setTimeValue(inofEntityList.get(i).getTimeValue());
          String givenFree="";
          int num=2;
-         for(int j=0;j<proInfo.get(i).getGivenFreeList().size();j++){  //赠送内容
+       /*  for(int j=0;j<proInfo.get(i).getGivenFreeList().size();j++){  //赠送内容
              if(j!=0){
                  givenFree=givenFree+"; "+num+"、"+proInfo.get(i).getGivenFreeList().get(j).getType();
                  num++;
              }else{
                  givenFree="1、"+proInfo.get(i).getGivenFreeList().get(j).getType();
              }
-         }
+         }*/
          orderInfo.setEntity(order);
          orderInfo.setGivenFree(givenFree);
          list.add(orderInfo);

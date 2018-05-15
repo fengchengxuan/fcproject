@@ -1365,15 +1365,15 @@ public class UserAction {
         List<FcUser> list1=new ArrayList<>();                   //用户
         List<ArticleEntity> list2=new ArrayList<>();
         for(int i=0;i<list.size();i++){
-            list1.add(service.getUser(list.get(i).getFcuserId(),""));
+          //  list1.add(service.getUser(list.get(i).getFcuserId(),""));
         }
         for(int i=0;i<list.size();i++){
-            list2.add(articleService.SreachId(list.get(i).getArtcleId()).get(0));
+         //   list2.add(articleService.SreachId(list.get(i).getArtcleId()).get(0));
         }
         List<ArtComment> list3 =new ArrayList<>();
         CommentUtil util=new CommentUtil();
         for(int i=0;i<list.size();i++){
-            list3.add(util.getArtComment(list.get(i).getId(),list.get(i).getCommenter(),list1.get(i).getUserTypeId(),list.get(i).getContent(),list.get(i).getCommontType(),list.get(i).getStatus(),list2.get(i).getArtTitle()));
+          //  list3.add(util.getArtComment(list.get(i).getId(),list.get(i).getCommenter(),list1.get(i).getUserTypeId(),list.get(i).getContent(),list.get(i).getCommontType(),list.get(i).getStatus(),list2.get(i).getArtTitle()));
 
         }
         util.setAtrCommentsList(list3);
@@ -1389,21 +1389,21 @@ public class UserAction {
         CommentUtil util=new CommentUtil();
         for(int i=0;i<list.size();i++){
 
-            if(service.getUser(list.get(i).getFcuserId(),"").getUserTypeId().equals(userType)){
+         /*   if(service.getUser(list.get(i).getFcuserId(),"").getUserTypeId().equals(userType)){
                 list1.add(list.get(i));
                 list2.add(service.getUser(list.get(i).getFcuserId(),""));
             }else if("".equals(userType)){
                 list1.add(list.get(i));
                 list2.add(service.getUser(list.get(i).getFcuserId(),""));
-            }
+            }*/
         }
         for(int i=0;i<list.size();i++){
-            list3.add(articleService.SreachId(list.get(i).getArtcleId()).get(0));
+          //  list3.add(articleService.SreachId(list.get(i).getArtcleId()).get(0));
         }
         List<ArtComment> list4 =new ArrayList<>();
 
         for(int i=0;i<list1.size();i++){
-            list4.add(util.getArtComment(list1.get(i).getId(),list1.get(i).getCommenter(),list2.get(i).getUserTypeId(),list1.get(i).getContent(),list1.get(i).getCommontType(),list1.get(i).getStatus(),list3.get(i).getArtTitle()));
+         //   list4.add(util.getArtComment(list1.get(i).getId(),list1.get(i).getCommenter(),list2.get(i).getUserTypeId(),list1.get(i).getContent(),list1.get(i).getCommontType(),list1.get(i).getStatus(),list3.get(i).getArtTitle()));
         }
         util.setAtrCommentsList(list4);
         return util;
@@ -1420,7 +1420,7 @@ public class UserAction {
     @RequestMapping("/updateComment")
     public @ResponseBody Map<String,Object> updateComment(String artCommentId,String commontType,String content){
          FcComment fcComment= commentService.findComment(artCommentId);
-         fcComment.setCommontType(commontType);
+       //  fcComment.setCommontType(commontType);
          fcComment.setContent(content);
          commentService.saveProComent(fcComment);
         map.put("ok",true);

@@ -47,41 +47,41 @@ public class ArticleAction {
             list.add("您还未登录!");
             return list;
         }else{
-            entity.setUserName(username);
+       //     entity.setUserName(username);
         }
         if (htmlText != null && htmlText != "") {
-            entity.setHtmlText(htmlText);
+       //     entity.setHtmlText(htmlText);
         }else{
             list.add("必须输入内容");
             return list;
         }
 
         if (title != null && title != "") {
-            entity.setArtTitle(title);
+         //   entity.setArtTitle(title);
         } else {
             list.add("必须输入文章标题");
             return list;
         }
         if (type != null && type != "") {
-            entity.setArtType(type);
+         //   entity.setArtType(type);
         } else {
             list.add("请选择发布类型");
             return list;
         }
         if (key != null && key != "") {
-            entity.setArtKey(key);
+        //    entity.setArtKey(key);
         } else {
             list.add("请输入关键词");
             return list;
         }
         if (abstract1 != null && abstract1 != "") {
-            entity.setArtAbstract(abstract1);
+         //   entity.setArtAbstract(abstract1);
         } else {
             list.add("输入摘要");
             return list;
         }
 
-        entity.setArtState(status);
+       // entity.setArtState(status);
         flse = service.addArticle(entity);
        list.add(flse);
         return list;
@@ -124,7 +124,7 @@ public class ArticleAction {
     List<String> upDataArt(String newArtTitle, String htmlText, String artTitle, String artKey, String artAbstract, String artType, HttpSession session) {
         String username = (String) session.getAttribute("loginName");
         if (username!=null&&username.length()>1){
-            entity.setUserName((String) session.getAttribute("loginName"));
+         //   entity.setUserName((String) session.getAttribute("loginName"));
         }else {
             list.add("您还未登录!");
             return list;
@@ -164,7 +164,7 @@ public class ArticleAction {
         }
         if (listArt.size() > 0) {
             for (int i = 0; i < listArt.size(); i++) {
-                list = service.deleteArt(listArt.get(i).getArtTitle());
+           //     list = service.deleteArt(listArt.get(i).getArtTitle());
             }
         }
         return list;
@@ -178,9 +178,9 @@ public class ArticleAction {
         if(artType.length()>0){
             List<ArticleEntity> list=new ArrayList();
             for(int i=0;i<listArt.size();i++){
-                if(artType.equals(listArt.get(i).getArtType())){
+           /*     if(artType.equals(listArt.get(i).getArtType())){
                     list.add(listArt.get(i));
-                }
+                }*/
             }
             return list;
 

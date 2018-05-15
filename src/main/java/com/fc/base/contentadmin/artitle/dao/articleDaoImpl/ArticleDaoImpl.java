@@ -42,7 +42,7 @@ public class ArticleDaoImpl extends BaseDao implements ArticleDao {
 
         listPara=new ArrayList<String>();
         if(newArtTitle!="" && newArtTitle!=null){
-            entity.setArtTitle(newArtTitle.trim());
+        //    entity.setArtTitle(newArtTitle.trim());
         }
        super.update(entity);
         listPara.add("更新成功");

@@ -6,7 +6,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "role")
-public class Role extends Base{
+public class
+Role extends Base{
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")

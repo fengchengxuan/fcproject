@@ -70,41 +70,41 @@ public class ProductAction {
         if (username==null|| username.length()<1){
             list.add("您还未登录!");
         }else {
-             entity.setUserName((String) session.getAttribute("loginName"));
+       //      entity.setUserName((String) session.getAttribute("loginName"));
          }
         if(htmlText!=null && !"".equals(htmlText)){
-            entity.setHtmlText(htmlText);
+       //     entity.setHtmlText(htmlText);
         }
 
         if(proTitle!=null && !"".equals(proTitle)){
-            entity.setProTitle(proTitle);
+       //     entity.setProTitle(proTitle);
         }else {
             list.add("必须输入产品标题");
             return list;
         }
         if(proType!=null && !"".equals(proType)){
 
-            entity.setProType(new ProUtil().typeChange(proType));
+           // entity.setProType(new ProUtil().typeChange(proType));
         }else {
             list.add("请选择发布类型");
             return list;
         }
         if(proKey!=null&& !"".equals(proKey)){
-            entity.setProKey(proKey);
+         //   entity.setProKey(proKey);
         }else {
             list.add("请输入关键字");
             return list;
         }
         if(proAbstract!=null && !"".equals(proAbstract)){
-            entity.setProAbstract(proAbstract);
+          //  entity.setProAbstract(proAbstract);
         }else{
             list.add("输入摘要");
             return list;
         }
         if(or){
-            entity.setProState("正常");
+         //   entity.setProState("正常");
         }else{
-            entity.setProState("草稿");
+          //  entity.setProState("草稿");
         }
         result= service.addProduct(entity);//先添加产品表
         if(  demand!=null && demand.length()>0){ //添加产品需求定位信息
@@ -187,7 +187,7 @@ public class ProductAction {
         }
        if(listPro.size()>0){
             for(int i=0;i<listPro.size();i++){
-            list =  service.deletePro(listPro.get(i).getProTitle());
+            //list =  service.deletePro(listPro.get(i).getProTitle());
             }
         }
         return list;
@@ -207,7 +207,7 @@ public class ProductAction {
     }
     @RequestMapping("/setTlement")//显示总价
     public @ResponseBody List<String> setTlement(int number,int proId,String demand ,String scheme,String time){
-            List<ProductInofEntity> proInfoList=service.sreachId(proId+"").get(0).getProInfoList();
+            /*List<ProductInofEntity> proInfoList=service.sreachId(proId+"").get(0).getProInfoList();
             for(int i=0;i<proInfoList.size();i++){
                 if(proInfoList.get(i).getDemand().equals(demand)&&proInfoList.get(i).getService().equals(scheme)&&proInfoList.get(i).getTimeValue().equals(time)){
                     String price= proInfoList.get(i).getServicePrice();
@@ -218,7 +218,7 @@ public class ProductAction {
                     list.add(totalNum+"");
                     return list;
                 }
-            }
+            }*/
 
         list.add("0");
         return list;
@@ -284,16 +284,16 @@ public class ProductAction {
         ProductEntity entity=service.searchTitle(proTitle).get(0);//查产品
         service.upDataService(username, newProTitle, htmlText, proTitle, proKey, proAbstract, proType);//保存产品
         entity=service.sreachId(entity.getId()+"").get(0);//id查产品
-        String str= service.upDateInfoService(entity.getProTitle(),oldDemand,newDemand,proService,price,hard_Configuration,soft_Configuration,personnel,
-                    time_Allocation,user_range,dataInfo,pro_manager,technical_service,serviceGuarante, preferential ,timeValue, num);//保存需求
-        list.add(str);
+     //   String str= service.upDateInfoService(entity.getProTitle(),oldDemand,newDemand,proService,price,hard_Configuration,soft_Configuration,personnel,
+               //     time_Allocation,user_range,dataInfo,pro_manager,technical_service,serviceGuarante, preferential ,timeValue, num);//保存需求
+      //  list.add(str);
         return list;
     }
     @RequestMapping("/showInfo")
     public @ResponseBody ProductInofEntity showInfo(String proTitle,String useTime,String demand,String proService ){
         List<ProductEntity> proList=  service.searchTitle(proTitle);
         if(proList.size()>0&&proList!=null){
-            List<ProductInofEntity> proInfoList=proList.get(0).getProInfoList();
+         /*   List<ProductInofEntity> proInfoList=proList.get(0).getProInfoList();
            if( proInfoList.size()>0&&proInfoList!=null){
                for(int i=0;i<proInfoList.size();i++){
                    String newProService=proInfoList.get(i).getService();
@@ -301,7 +301,7 @@ public class ProductAction {
                        return proInfoList.get(i);
                    }
                }
-           }
+           }*/
 
             return null;
         }
@@ -309,10 +309,10 @@ public class ProductAction {
     }
     @RequestMapping("/allDemand")//返回全部需定位
     public @ResponseBody  SreachPro allDemand(String proTitle){
-        List<ProductInofEntity> list = service.searchTitle(proTitle).get(0).getProInfoList();
+   //     List<ProductInofEntity> list = service.searchTitle(proTitle).get(0).getProInfoList();
         SreachPro util= new SreachPro();
         util.setList(service.searchTitle(proTitle));
-        util.setProInfoList(list);
+       // util.setProInfoList(list);
         return  util;
     }
     @RequestMapping("/deleteDemand")
@@ -328,28 +328,28 @@ public class ProductAction {
         if (username==null|| username.length()<1){
             list.add("您还未登录!");
         }else {
-            entity.setUserName((String) session.getAttribute("loginName"));
+          //  entity.setUserName((String) session.getAttribute("loginName"));
         }
         if(productTitle!=null && !"".equals(productTitle)){
-            entity.setProTitle(productTitle);
+         //   entity.setProTitle(productTitle);
         }else {
             list.add("必须输入产品标题");
             return list;
         }
         if(productType!=null && !"".equals(productType)){
-            entity.setProType(productType);
+        //    entity.setProType(productType);
         }else {
             list.add("请选择发布类型");
             return list;
         }
         if(productKey!=null&& !"".equals(productKey)){
-            entity.setProKey(productKey);
+         //   entity.setProKey(productKey);
         }else {
             list.add("请输入关键字");
             return list;
         }
         if(productAbstract!=null && !"".equals(productAbstract)){
-            entity.setProAbstract(productAbstract);
+         //   entity.setProAbstract(productAbstract);
         }else{
             list.add("输入摘要");
             return list;
@@ -374,12 +374,12 @@ public class ProductAction {
            ProductEntity proEntity=service.sreachId(titleId).get(0);
            String demand= rowArrs[0];                               //取需求
            String service= rowArrs[1];                              //取服务
-                         for(int i=0;i<proEntity.getProInfoList().size();i++){
+                /*         for(int i=0;i<proEntity.getProInfoList().size();i++){
                              ProductInofEntity entity=  proEntity.getProInfoList().get(i);
                              if(demand.equals(entity.getDemand()) && service.equals(entity.getService()) && time.equals(entity.getTimeValue())){
                                  list.add(entity);
                      }
-                 }
+                 }*/
         }
     }
     Amount amout=new Amount();//结算总金额
@@ -398,19 +398,19 @@ public class ProductAction {
             if(rowArrs!=null&&rowArrs.length>1) {
                 String demand= rowArrs[0];                               //取需求
                 String service= rowArrs[1];                              //取服务
-                for(int i=0;i<proEntity.getProInfoList().size();i++){
+             /*   for(int i=0;i<proEntity.getProInfoList().size();i++){
                     ProductInofEntity entity=  proEntity.getProInfoList().get(i);
                     if(demand.equals(entity.getDemand()) && service.equals(entity.getService()) && time.equals(entity.getTimeValue())){
                         list.add(entity);
                     }
-                }
+                }*/
             }
         }
         Amount amout=new Amount();//结算总金额
         String totalPice  =amout.finalPrice(list,num,amout.showAmount(list,num));//结算最后总价格
         OrderUtil util=new OrderUtil();
         util.setPrice(totalPice);
-        util.setProTitle(proEntity.getProTitle());
+       // util.setProTitle(proEntity.getProTitle());
         util.setInofEntityList(list);
         util.setNum(num);
         request.getSession(true).setAttribute("showOrder",util);
@@ -461,9 +461,9 @@ public class ProductAction {
             map.put("ok",true);
             FcComment fcComment=new FcComment();
             fcComment.setContent(content);
-            fcComment.setFcuserId(fcUser.getId());
+         /*   fcComment.setFcuserId(fcUser.getId());
             fcComment.setCommenter(fcUser.getUserName());
-            fcComment.setCommentClass("0");
+            fcComment.setCommentClass("0");*/
             commentService.saveProComent(fcComment);
         }
         return  map;

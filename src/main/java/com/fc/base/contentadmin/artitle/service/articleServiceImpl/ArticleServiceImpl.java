@@ -54,19 +54,19 @@ public class ArticleServiceImpl implements ArticleService {
         };
         Date newDate=new Date();  //获取系统当前时间
         Format format=new SimpleDateFormat("yyyy-MM-dd  HH:mm"); //时间格式
-        entity.setCrateDate(format.format(newDate));
+       // entity.setCrateDate(format.format(newDate));
         if(artTitle!=null && artTitle!=""){
-            entity.setArtTitle(artTitle.trim());
+        //    entity.setArtTitle(artTitle.trim());
         }
         if(artAbstract!=null && artAbstract!=""){
-            entity.setArtTitle(artAbstract.trim());
+       //     entity.setArtTitle(artAbstract.trim());
         }
         if(artKey!=null && artKey!=""){
-            entity.setArtTitle(artKey.trim());
+        //    entity.setArtTitle(artKey.trim());
         }
-        entity.setHtmlText(htmlText);
+     /*   entity.setHtmlText(htmlText);
         entity.setUserName(userName);
-        entity.setArtType(artType);
+        entity.setArtType(artType);*/
         listS= articleDao.upDateArt(entity,newArtTitle);
         return listS;
     }
@@ -82,18 +82,18 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public String addArticle(ArticleEntity entity) {
         List<ArticleEntity> list =new ArrayList<ArticleEntity>();
-        if(entity.getArtTitle().length()>30){
+     /*   if(entity.getArtTitle().length()>30){
             return "标题不能超过30个";
         }else if (entity.getArtKey().length()>15){
             return "关键字必须小于15个";
         }else if(entity.getArtAbstract().length()>100){
             return "摘要文字不能超过100";
-        }
+        }*/
         createDate=new Date();
         Format format=new SimpleDateFormat("yyyy-MM-dd  hh:mm");
-        entity.setCrateDate(format.format(createDate));
+      /*  entity.setCrateDate(format.format(createDate));
         entity.setArtBrowser(0);
-        list= articleDao.sreachTitleArticleDao(entity.getArtTitle());
+        list= articleDao.sreachTitleArticleDao(entity.getArtTitle());*/
         if(list.size()>0){
             return "已经有相应的标题";
         }
@@ -112,7 +112,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public List<String> deleteArt(String artTitle) {
         entity= articleDao.sreachTitleArticleDao(artTitle).get(0);
-        entity.setArtState("删除");
+     //   entity.setArtState("删除");
         return articleDao.deleteArt(entity);
     }
 
@@ -125,7 +125,7 @@ public class ArticleServiceImpl implements ArticleService {
     public List<ArticleEntity> artBrowserService(String artTitle) {//添加浏览量
         list= articleDao.sreachTitleArticleDao(artTitle);
         if(list.size()>0){
-            list.get(0).setArtBrowser(list.get(0).getArtBrowser()+1);
+          //  list.get(0).setArtBrowser(list.get(0).getArtBrowser()+1);
             list=articleDao.artBrowserDao(list.get(0));
         }
         return list;
@@ -153,9 +153,9 @@ public class ArticleServiceImpl implements ArticleService {
         if(list!=null && !list.isEmpty()) {
             for (int i = 0; i < list.size(); i++) {
                 try {
-                    strList.add(list.get(i).getCrateDate());
+              /*      strList.add(list.get(i).getCrateDate());
                     data = format.parse(list.get(i).getCrateDate());
-                    list.get(i).setCrateDate(format2.format(data));
+                    list.get(i).setCrateDate(format2.format(data));*/
                 } catch (Exception e) {
                     e.printStackTrace();
                     return null;
@@ -169,7 +169,7 @@ public class ArticleServiceImpl implements ArticleService {
     public List<ArticleEntity> showDateOrFC(String type, String id) {
        list= articleDao.showDateOrFCDao(type,id);
        if(list.size()>0){
-           artBrowserService(list.get(0).getArtTitle());
+         //  artBrowserService(list.get(0).getArtTitle());
     }
         return list;
     }

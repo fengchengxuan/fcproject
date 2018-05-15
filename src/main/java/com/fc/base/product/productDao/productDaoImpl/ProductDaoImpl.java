@@ -49,7 +49,7 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
 
         listPara=new ArrayList<String>();
         if(newProTitle!="" && newProTitle!=null){
-             entity.setProTitle(newProTitle.trim());
+         //    entity.setProTitle(newProTitle.trim());
         }
         super.update(entity);
         listPara.add("更新成功");
