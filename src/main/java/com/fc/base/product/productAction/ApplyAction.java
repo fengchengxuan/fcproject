@@ -53,7 +53,7 @@ public class ApplyAction {
         if(fcUser!= null){
             fcUser.getProdKindId().setProKind(prodKindId);
             fcUser.getComptypeId().setCompType(comptypeId);
-            fcUser.getAppTypeId().setAppType(appTypeId);
+            fcUser.getAppTypeId().setType(appTypeId);
             fcUser.setCompany(companyname);
             fcUser.setOperAddr(address);
             fcUser.setPhone(hpone);

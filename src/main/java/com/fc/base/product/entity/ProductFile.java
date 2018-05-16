@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class ProductFile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;// id
+    private int id;// id
     @Column(name = "product_info_id")
     private String product_info_id;// product_info 表的 id
     @Column(name = "hard_config")
@@ -34,11 +34,11 @@ public class ProductFile {
     @Column(name = "given")
     private String given;// 赠送
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

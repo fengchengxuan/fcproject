@@ -7,7 +7,7 @@ import java.util.Date;
 public class OrderQuestion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;// id
+    private int id;// id
     @Column(name = "product_info_id")
     private String product_info_id;// product_info 表的 id
     @Column(name = "fcuser_id")
@@ -25,11 +25,11 @@ public class OrderQuestion {
     @Column(name = "judge_status")
     private String judge_status;// 评价状态：1-正常，0-拦截
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

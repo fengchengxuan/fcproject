@@ -473,9 +473,10 @@ public class LoginAction {
         return "Chus";
     }
 
-    @RequestMapping("vip")
+    @RequestMapping("evip")
     public String vip(){
-        return "html/menber/center";
+
+        return "vip/vipindex/vipindex";
     }
 
     @RequestMapping("vips")
@@ -609,10 +610,10 @@ public class LoginAction {
                 }
 
                 if (fcUser.getAppTypeId() != null) {
-                    fcUser.getAppTypeId().setAppType(appTypeId);
+                    fcUser.getAppTypeId().setType(appTypeId);
                 } else {
                     AppType appType = new AppType();//申请人类型
-                    appType.setAppType(appTypeId);
+                    appType.setType(appTypeId);
                     fcUser.setAppTypeId(appType);
                 }
 

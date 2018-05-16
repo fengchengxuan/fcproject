@@ -1,0 +1,682 @@
+/*票据管理*/
+.tishi{
+    width: 980px; 
+    height: auto; 
+    margin-top: 8px;
+    box-shadow: 0 2px 5px 0 #cccccc;
+}
+.tbox:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.tbox{
+	width: 900px;
+	height: auto;
+	margin: 0 auto;
+}
+.tbox1{
+	width: 900px;
+	height: auto;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(221, 221, 221, 1);
+}
+.tbox1 p{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333333;
+	line-height: 80px;
+	font-family: "微软雅黑",sans-serif;
+}
+.tbox2{
+	width: 61px;
+	height: auto;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	float: left;
+}
+.tbox3{
+	width: 790px;
+	height: auto;
+	float: right;
+	margin-top: 40px;
+}
+.tbox3 p{
+	font-size: 14px;
+	color: #666666;
+	line-height: 24px;
+	font-family: "微软雅黑",sans-serif;
+}
+.tlist{
+	width: 900px;
+	height: auto;
+	margin: 0 auto;
+}
+.tlist:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.tlist li{
+	width: 160px;
+	height: 40px;
+	float: left;
+	text-align: center;
+	background: #38D46C;
+	border-radius: 4px;
+	margin-right: 24px;
+	margin-bottom: 48px;
+}
+.tlist li:last-child{
+	margin-right: 0;
+}
+.tlist a{
+	width: 160px;
+	height: 40px;
+	border-radius: 4px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	font-family: "微软雅黑",sans-serif;
+	letter-spacing:3px;
+}
+/*申请开发票*/
+.shengqing{
+	width: 980px;
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 0 1px 10px 0 #cccccc;
+}
+.sbox{
+	width: 980px;
+	height: auto;
+	border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+.slist{
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+}
+.slist:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.slist li{
+	float: left;
+	margin-left: 40px;
+	width: auto;
+	height: 58px;
+	line-height: 58px;
+	box-sizing: border-box;
+}
+.slist li a{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "微软雅黑",sans-serif;
+	color: #666666;
+	letter-spacing:3px;
+}
+.slist li:first-child{
+	border-bottom: 3px solid rgba(3, 160, 166, 1);
+}
+.slist li:first-child a{
+	color: #333333;
+}
+.sbox1{
+	width: 980px;
+	height: auto;
+}
+.sbox2{
+	width: 610px;
+	height: auto;
+	margin: 0 auto;
+}
+.slist1 li{
+	margin-top: 30px;
+}
+.slist1>li>p{
+	display: inline-block;
+	width: 65px;
+	height: 30px;
+	line-height: 30px;
+	color: #666666;
+	margin-right: 10px;
+	letter-spacing: 2px;
+}
+.slist1 input{
+	width: 300px;
+	height: 30px;
+	border-radius: 2px;
+	outline:none;
+	padding-left: 10px;
+	box-sizing: border-box;
+	border: solid 1px rgba(221, 221, 221, 1);
+	background: #F4F4F4;
+	letter-spacing: 1px;
+}
+.slist1 li:first-child{
+	margin-top: 50px;
+}
+.sbtn{
+	width: 160px;
+	height: 40px;
+	background-color: rgba(56, 212, 108, 1);
+	border-radius:4px;
+	outline:none;
+	font-size: 16px;
+	color: #ffffff;
+	font-family: "微软雅黑",sans-serif;
+	margin-left: 205px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	letter-spacing: 3px;
+}
+
+/*申请开电子发票*/
+.dianzi{
+	width: 980px;
+	height: auto;
+	margin-top: 20px;
+	box-shadow: 0 1px 10px 0 #cccccc;
+}
+.dzbox{
+	width: 980px;
+	height: auto;
+	border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+.dzlist{
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+}
+.dzlist:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.dzlist li{
+	float: left;
+	margin-left: 40px;
+	width: auto;
+	height: 58px;
+	line-height: 58px;
+	box-sizing: border-box;
+}
+.dzlist li a{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "微软雅黑",sans-serif;
+	color: #666666;
+	letter-spacing:3px;
+}
+.dzlist li:nth-child(2){
+	border-bottom: 3px solid rgba(3, 160, 166, 1);
+}
+.dzlist li:nth-child(2) a{
+	color: #333333;
+}
+.dzbox1{
+	width: 980px;
+	height: auto;
+}
+.dzbox2{
+	width: 610px;
+	height: auto;
+	margin: 0 auto;
+}
+.dzlist1 li{
+	margin-top: 30px;
+}
+.dzlist1>li>p{
+	display: inline-block;
+	width: 96px;
+	height: 30px;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-align-last: justify;
+	line-height: 30px;
+	color: #666666;
+	margin-right: 10px;
+	letter-spacing: 2px;
+}
+.dzlist1 input{
+	width: 300px;
+	height: 30px;
+	border-radius: 2px;
+	outline:none;
+	padding-left: 10px;
+	box-sizing: border-box;
+	border: solid 1px rgba(221, 221, 221, 1);
+	background: #F4F4F4;
+	letter-spacing: 1px;
+}
+.dzlist1 li:first-child{
+	margin-top: 50px;
+}
+.dzlist1 li span.tishi{
+	font-size: 12px;
+	color: #ee1010;
+	padding: 0 0 0 20px;
+	display: none;
+}
+.dzbtn{
+	width: 160px;
+	height: 40px;
+	background-color: rgba(56, 212, 108, 1);
+	border-radius:4px;
+	outline:none;
+	font-size: 16px;
+	color: #ffffff;
+	font-family: "微软雅黑",sans-serif;
+	margin-left: 205px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	letter-spacing: 3px;
+}
+.dzlist1>li.dziimg{
+	height: 230px;
+}
+.dziimg img{
+	display: block;
+	width: 222px;
+	height: 222px;
+	float: left;
+}
+.dzlist1>li.dziimg>p{
+	width: 255px;
+	float: left;
+	text-align: left;
+	margin: 20px 0 0 8px;
+}
+
+
+/*收发发票*/
+.shoufa{
+	width: 980px; 
+    height: auto; 
+    margin-top: 20px;
+    box-shadow: 0 1px 10px 0 #cccccc;
+}
+.fbox{
+	width: 980px;
+	height: auto;
+	border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+.flist{
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+}
+.flist:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.flist>li{
+	float: left;
+	margin-left: 40px;
+	width: auto;
+	height: 58px;
+	line-height: 58px;
+	box-sizing: border-box;
+}
+.flist>li a{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "微软雅黑",sans-serif;
+	color: #666666;
+	letter-spacing: 3px;
+}
+.flist>li:nth-child(3){
+	border-bottom: 3px solid rgba(3, 160, 166, 1);
+}
+.flist>li:nth-child(3) a{
+	color: #333333;
+}
+.fbox1{
+	width: 980px;
+	height: auto;
+}
+.fbox2{
+	width: 610px;
+	height: auto;
+	margin: 0 auto;
+}
+.flist1>li{
+	margin-top: 30px;
+}
+.flist1>li>span{
+	display: inline-block;
+	width: 65px;
+	height: 30px;
+	line-height: 30px;
+	color: #666666;
+	margin-right: 10px;
+	letter-spacing: 2px;
+}
+.flist1 input{
+	width: 300px;
+	height: 30px;
+	border-radius: 2px;
+	outline:none;
+	padding-left: 10px;
+	box-sizing: border-box;
+	border: solid 1px rgba(221, 221, 221, 1);
+	background: #F4F4F4;
+	letter-spacing: 1px;
+}
+.flist1>li:first-child{
+	margin-top: 50px;
+}
+.fbtn{
+	width: 160px;
+	height: 40px;
+	background-color: rgba(56, 212, 108, 1);
+	border-radius:4px;
+	outline:none;
+	font-size: 16px;
+	color: #ffffff;
+	font-family: "微软雅黑",sans-serif;
+	margin-left: 205px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	letter-spacing: 2px;
+}
+.flist1>li .fsp{
+	letter-spacing: 3px;
+}
+/*发票管理*/
+.guanli{
+	width: 980px; 
+    height: auto; 
+    margin-top: 20px;
+    box-shadow: 0 1px 10px 0 #cccccc;
+}
+.gbox{
+	width: 980px;
+	height: auto;
+	border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+.glist{
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+}
+.glist:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.glist li{
+	float: left;
+	margin-left: 40px;
+	width: auto;
+	height: 58px;
+	line-height: 58px;
+	box-sizing: border-box;
+}
+.glist li a{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "微软雅黑",sans-serif;
+	color: #666666;
+	letter-spacing: 3px;
+}
+.glist li:nth-child(4){
+	border-bottom: 3px solid rgba(3, 160, 166, 1);
+}
+.glist li:nth-child(4) a{
+	color: #333333;
+}
+.gbox1{
+	width: 980px;
+	height: auto;
+}
+.gbox2{
+	width: 960px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 50px;
+}
+.gbox2 table{
+	border-collapse: collapse;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	overflow: hidden;
+}
+.gbox2 td{
+	height: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.gtr{
+	background: -moz-linear-gradient(#73EBBA,#05CDBA);
+	background: -o-linear-gradient(#73EBBA,#05CDBA);
+	background: -moz-linear-gradient(#73EBBA,#05CDBA); 
+	background: linear-gradient(#73EBBA,#05CDBA);
+	font-size: 16px;
+	color: white;
+	border-bottom: 1px solid #026D9C;
+}
+.gd1{
+	width: 110px;
+}
+.gd2{
+	width: 160px;
+}
+.gd3{
+	width: 180px;
+}
+.gd4{
+	width: 190px;
+}
+.gd5{
+	width: 160px;
+}
+.gd6{
+	width: 160px;
+}
+.gr td{
+	background: #E3E3E3;
+}
+.gr td:nth-child(2n){
+	background: #EBEBEB;
+}
+.gr1 td{
+	background: #F6F6F6;
+}
+.gr1 td:nth-child(2n){
+	background: #FFFFFF;
+}
+/*发票到哪*/
+.daona{
+	width: 980px; 
+    height: auto; 
+    margin-top: 20px;
+    box-shadow: 0 1px 10px 0 #cccccc;
+}
+.dbox{
+	width: 980px;
+	height: auto;
+	border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+.dlist{
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+}
+.dlist:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.dlist li{
+	float: left;
+	margin-left: 40px;
+	width: auto;
+	height: 58px;
+	line-height: 58px;
+	box-sizing: border-box;
+}
+.dlist li a{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "微软雅黑",sans-serif;
+	color: #666666;
+	letter-spacing: 3px;
+}
+.dlist li:nth-child(5){
+	border-bottom: 3px solid rgba(3, 160, 166, 1);
+}
+.dlist li:nth-child(5) a{
+	color: #333333;
+}
+.dbox1{
+	width: 980px;
+	height: auto;
+}
+.dbox2{
+	width: 960px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 50px;
+}
+.dlist1{
+	width: 960px;
+	height: 50px;
+	background: -moz-linear-gradient(#73EBBA,#05CDBA);
+	background: -o-linear-gradient(#73EBBA,#05CDBA);
+	background: -moz-linear-gradient(#73EBBA,#05CDBA); 
+	background: linear-gradient(#73EBBA,#05CDBA);
+	border-bottom: 1px solid #026D9C;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+}
+.dlist1:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.dlist1 li{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "微软雅黑",sans-serif;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.dl1{
+	margin-left: 83px;
+}
+.dl2{
+	margin-left: 98px;
+}
+.dl3{
+	margin-left: 118px;
+}
+.dl4{
+	margin-left: 140px;
+}
+.dlist2{
+	width: 960px;
+	margin-top: 32px;
+}
+.dlist2:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.dlist2 li{
+	float: left;
+	font-size: 14px;
+	color: #666666;
+	letter-spacing: 2px;
+}
+.dl5{
+	margin-left: 46px;
+}
+.dl6{
+	margin-left: 97px;
+}
+.dl7{
+	margin-left: 124px;
+}
+.dl8{
+	margin-left: 120px;
+}
+
+
+/*插件下拉框*/
+* {
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: Arial,
+	Helvetica, sans-serif;
+	font-size: 12px; }
+form{
+    display: inline-block;
+    position: relative;
+}
+.cur{ 
+	cursor:pointer; 
+	display:block;
+	width: 288px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px; 
+	border-radius: 2px;
+}
+.am { 
+	border: 0;
+	cursor: pointer;  
+	display:block; 
+}
+.bm { 
+	border: solid 1px rgba(221, 221, 221, 1); 
+	width:300px; 
+	box-sizing: border-box; 
+	position: absolute;
+	background: white;
+	z-index: 999;
+	font-size: 14px;
+	color: #333333;
+	font-family: "微软雅黑",sans-serif;
+}
+.bm span:hover{
+	background:#F4F4F4 !important;
+}
+.img{
+	position: absolute;
+	top: 12px;
+	right:10px;
+}

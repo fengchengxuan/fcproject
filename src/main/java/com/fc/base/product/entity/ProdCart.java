@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class ProdCart {//购物车
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;// id
+    private int id;// id
     @Column(name = "fcuser_id")
     private String fcuser_id;// 用户id
     @Column(name = "product_id")
@@ -21,11 +21,11 @@ public class ProdCart {//购物车
     @Column(name = "totle_price")
     private float totle_price;// 总价
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

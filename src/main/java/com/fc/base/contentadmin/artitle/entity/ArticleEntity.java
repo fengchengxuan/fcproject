@@ -16,7 +16,12 @@ import java.util.List;
 public class ArticleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;// id
+    private int id;// id
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Column(name = "fcuser_id" )
     private String fcuser_id;// 用户id
     @Column(name = "fccomment_id" )
@@ -40,13 +45,6 @@ public class ArticleEntity {
     @Column(name = "browse_count" )
     private int browse_count;// 浏览次数
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getFcuser_id() {
         return fcuser_id;

@@ -23,12 +23,12 @@ public class ArticleDaoImpl extends BaseDao implements ArticleDao {
         listPara=new ArrayList<String>();
         StringBuffer hql=new StringBuffer("from ArticleEntity where  1=1");
         if(artState!=null && artState!=""){
-            hql.append(" and artState = ?");
-            listPara.add(artState);
+          //  hql.append(" and artState = ?");
+          //  listPara.add(artState);
         }
        if(artType!=null && artType.length()>0){
-            hql.append("and artType = ?");
-            listPara.add(artType);
+         //   hql.append("and artType = ?");
+          //  listPara.add(artType);
         }
         if(systemId!=null && systemId.length()>0){
                 hql.append("and adminType = ?");
@@ -110,8 +110,8 @@ public class ArticleDaoImpl extends BaseDao implements ArticleDao {
     public List<ArticleEntity> findArticle() {
         listPara= new ArrayList<String>();
         StringBuffer hql=new StringBuffer("from ArticleEntity where 1=1 ");
-        hql.append(" and artState = ?");
-        listPara.add("正常");
+      //  hql.append(" and artState = ?");
+       // listPara.add("正常");
       return super.findList(hql.toString(),listPara);
     }
     @Override//更新浏览量
@@ -128,11 +128,11 @@ public class ArticleDaoImpl extends BaseDao implements ArticleDao {
 
        List<String>list=new ArrayList();
 
-    StringBuffer hql=new StringBuffer("from ArticleEntity where artState = ?") ;
-    list.add("正常");
+    StringBuffer hql=new StringBuffer("from ArticleEntity where 1 = 1") ;
+    //list.add("正常");
     if(artType!=null){
-        hql.append("and artType = ?");
-        list.add(artType);
+      //  hql.append("and artType = ?");
+        //list.add(artType);
     }
      return  super.findList(hql.toString(),list);
 
@@ -142,11 +142,11 @@ public class ArticleDaoImpl extends BaseDao implements ArticleDao {
     public List<ArticleEntity> showDateOrFCDao(String type, String id) {
         listPara= new ArrayList<>();
         StringBuffer hql=new StringBuffer("from ArticleEntity where 1=1 ");
-        hql.append(" and artState = ?");
-        listPara.add("正常");
+      //  hql.append(" and artState = ?");
+      //  listPara.add("正常");
         if(type!=null && type.length()>0){
-            hql.append(" and artType = ?");
-            listPara.add(type);
+         //   hql.append(" and artType = ?");
+         //   listPara.add(type);
         }
         if(id!=null && id.length()>0){
             hql.append(" and id = ?");

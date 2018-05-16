@@ -27,8 +27,8 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
        list=new ArrayList<ProductEntity>();
        StringBuffer hql=new StringBuffer("from ProductEntity where  1=1");
        if(proState!=null && proState.length()>0){
-           hql.append(" and proState = ?");
-           listPara.add(proState);
+        //   hql.append(" and proState = ?");
+        //   listPara.add(proState);
        }
        if(proType!=null && proType.length()>0){
            hql.append("and proType = ?");
@@ -136,8 +136,8 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
     public List<ProductEntity> proShowDao() {
         listPara= new ArrayList<String>();
         StringBuffer hql=new StringBuffer("from ProductEntity where 1=1 ");
-        hql.append(" and proState = ?");
-        listPara.add("正常");
+      //  hql.append(" and proState = ?");
+      //  listPara.add("正常");
         list=new ArrayList<ProductEntity>();
         Query query =createSession().createQuery(hql.toString());
         if(listPara.size()>0){
