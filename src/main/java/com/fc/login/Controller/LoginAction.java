@@ -98,7 +98,7 @@ public class LoginAction {
     @ModelAttribute
     public void init(){
         map=new HashMap<>();
-        map.put("ok", true);
+        map.put("ok", false);
     }
 
     @RequestMapping("/register")
@@ -154,39 +154,14 @@ public class LoginAction {
     @RequestMapping("logs")//登录
     public @ResponseBody Map<String,Object>logs(HttpServletRequest request,String type ,String user,String password) {
         HttpSession session = request.getSession(true);
-        FcUser fcUser = null;
-        fcUser = userService.loginUser("" ,user, "");
-        //判断用户是否注册
-        if(fcUser==null) {
-        	//返回消息：“用户未注册，请先注册”
-        	 map.put( "unregister",true);
-        } else  //判断是否登录 
-        {
-        	FcUser sessionUser = (FcUser) session.getAttribute("fcUser");
-        	if (sessionUser!=null)
-        	{
-        	    String uname = sessionUser.getUserName();
-        	    if(!"".equals(uname) && uname.equals(user)) {
-                    map.put("logined", true); //返回消息：用户已登录，无法再登陆
-                }
-        	}
-	        else { //用户未登录
-	             fcUser=userService.loginUser(type ,user, password);
-		           if(fcUser!=null){ //用户登录成功
-		               session.setAttribute("userName",fcUser.getUserName());//用户名
-//		               session.setAttribute("user",user);//登录号
-//		               session.setAttribute("password",password);
-//		               session.setAttribute("type",type);//类型
-		               session.setAttribute("fcUser", fcUser);
-		               map.put( "success",true);
-		           }else{
-		        	   if(userService.findList(user, null, null).size()<0) {
-		        		   //返回消息：用户登陆失败
-		        		   map.put( "failed",true);
-		        	   }
-		         }
-           }
-        }
+        FcUser fcUser=	userService.loginUser("",user, password);
+        if(fcUser!=null) {
+            session=request.getSession();
+            session.setAttribute("fcUser", fcUser);//存入session
+            map.put("ok", true);
+        }else{
+            map.put("ok", false);
+        };
         return map;
     }
 
@@ -473,10 +448,10 @@ public class LoginAction {
         return "Chus";
     }
 
-    @RequestMapping("evip")
+    @RequestMapping("vip")
     public String vip(){
 
-        return "vip/vipindex/vipindex";
+        return "html/NewWebPage/archives/center";
     }
 
     @RequestMapping("vips")
@@ -524,8 +499,7 @@ public class LoginAction {
     @RequestMapping("pwd")
     public String password(HttpSession session){
     	if(session.getAttribute("fcUser")!=null)
-            return "html/menber/password";
-
+            return "html/NewWebPage/archives/mima";
     	else 
     		return "/login";
     }
@@ -680,37 +654,21 @@ public class LoginAction {
      * @return
      */
     @RequestMapping("findpwd")
-    public @ResponseBody List<String> findpwd(HttpServletRequest request,String oldpassword,String password,String repassword){
+    public @ResponseBody Map<String,Object> findpwd(HttpServletRequest request,String oldpassword,String password,String repassword){
         List<String> list = new ArrayList<>();
         HttpSession session = request.getSession(true);
 //        String user=(String)session.getAttribute("user");
         String user= ((FcUser)session.getAttribute("fcUser")).getUserName();
-            if(user==null || user.length()<1){
-            list.add("您还未登录!");
-            return list;
-             }
-        if(oldpassword.equals(password)){
-            list.add("新旧密码不能一样!");
-            return list;
+        FcUser fcUser=userService.loginUser("",user,oldpassword);
+        if(fcUser!=null){
+            fcUser.setPassword(password);
+            fcUser.setRePassword(repassword);
+            userService.saveUser(fcUser);
+            session.setAttribute("fcUser",fcUser);
+            map.put("ok",true);
         }
-        if(!password.equals(repassword)){
-            list.add("两次密码不一致!");
-            return list;
-        }
-//        String type=(String)session.getAttribute("type");
-        String type= ((FcUser)session.getAttribute("fcUser")).getUserTypeId();
-          FcUser fcUser = userService.loginUser(type,user,oldpassword);
-	      if(fcUser!=null){
-              fcUser.setPassword(password);
-              fcUser.setRePassword(repassword);
-              userService.saveUser(fcUser);
-		      list.add("修改成功");
-//              session.setAttribute("password",password);
-		      session.setAttribute("fcUser", fcUser);
-	      }else{
-              list.add("密码错误");
-          }
-	      return list;
+
+	      return map;
     }
     @RequestMapping("anonymousLogin")//匿名注册登录
     public @ResponseBody Map<String,Object> anonymousLogin(HttpServletRequest request){

@@ -1,4 +1,4 @@
-$(".save").click(function(){
+$(".button_2").click(function(){
 
     if($("#oldpassword").val()==null || $("#oldpassword").val()=="" ) {
         //alert("");
@@ -29,8 +29,8 @@ $(".save").click(function(){
         cache:false,
         dataType : 'json',
         success : function(data){
-            if(data!=null){
-                alert(data[0]);
+            if(data.ok){
+                alert("更新成功");
                 window.location.href = ctx+"/pwd"
             }
         }})

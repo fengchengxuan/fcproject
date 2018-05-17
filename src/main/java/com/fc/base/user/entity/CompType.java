@@ -1,15 +1,16 @@
 package com.fc.base.user.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "comp_type")
 public class CompType extends Base{
     @Id
-    @Column(name = "comp_type_id",length = 1)
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
+    @Column(name = "comp_type_id",length = 36)
     private String compTypeId;
     @Column(name = "comp_type")
     private String compType;
